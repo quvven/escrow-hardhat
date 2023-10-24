@@ -7,7 +7,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 export async function approve(escrowContract, signer) {
   const approveTxn = await escrowContract.connect(signer).approve();
-  await approveTxn.wait();
+  await approveTxn.wait({});
 }
 
 function App() {
@@ -59,17 +59,17 @@ function App() {
         <h1> New Contract </h1>
         <label>
           Arbiter Address
-          <input type="text" id="arbiter" />
+          <input type="text" id="arbiter" value={"0xdD2FD4581271e230360230F9337D5c0430Bf44C0"} />
         </label>
 
         <label>
           Beneficiary Address
-          <input type="text" id="beneficiary" />
+          <input type="text" id="beneficiary" value={"0xbDA5747bFD65F08deb54cb465eB87D40e51B197E"} />
         </label>
 
         <label>
           Deposit Amount (in Wei)
-          <input type="text" id="wei" />
+          <input type="text" id="wei" value={"10000000000000000000"} />
         </label>
 
         <div

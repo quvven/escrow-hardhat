@@ -20,6 +20,10 @@ export default function Escrow({
           <div> Value </div>
           <div> {value} </div>
         </li>
+        <li>
+          <div> Contract Address </div>
+          <div> {address} </div>
+        </li>
         <div
           className="button"
           id={address}
